@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EIRA ATELIER | Haute Couture</title>
+  <meta name="description"
+    content="EIRA ATELIER - Timeless haute couture and bespoke tailoring crafted with heritage techniques and contemporary elegance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ===== BASE STYLES ===== */
+    :root {
+      --cream: #f9f5f0;
+      --taupe: #a68a64;
+      --dark-brown: #3a3228;
+      --light-taupe: #e8d9c5;
+      --gold: #c5a876;
+      --text-dark: #333;
+      --text-light: #f9f5f0;
+      --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --section-padding: 15rem 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background-color: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1800px;
+      margin: 0 auto;
+    }
+
+    .section-padding {
+      padding: var(--section-padding);
+    }
+
+    .section-title {
+      font-size: 7.2rem;
+      margin-bottom: 6rem;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      font-weight: 400;
+    }
+
+    .section-title .title-text {
+      display: inline-block;
+      transform: translateY(120%);
+      opacity: 0;
+      animation: fadeUp 1.6s var(--ease-out) forwards;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -3rem;
+      left: 0;
+      width: 70%;
+      height: 1px;
+      background-color: var(--taupe);
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: scaleIn 1.6s var(--ease-out) 0.6s forwards;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.2rem 5rem;
+      border: 1px solid var(--taupe);
+      color: var(--taupe);
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 3px;
+      font-size: 1.4rem;
+      transition: var(--transition);
+      cursor: pointer;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+      z-index: 1;
+      gap: 2rem;
+    }
+
+    .btn:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--taupe);
+      transform: translateX(-101%);
+      transition: var(--transition);
+      z-index: -1;
+    }
+
+    .btn:hover {
+      color: var(--text-light);
+      letter-spacing: 4px;
+    }
+
+    .btn:hover:before {
+      transform: translateX(0);
+    }
+
+    .btn-filled {
+      background-color: var(--taupe);
+      color: var(--text-light);
+    }
+
+    .btn-filled:before {
+      background-color: var(--dark-brown);
+    }
+
+    .btn-filled:hover {
+      color: var(--text-light);
+      border-color: var(--dark-brown);
+    }
+
+    .btn i {
+      transition: var(--transition);
+    }
+
+    .btn:hover i {
+      transform: translateX(1rem);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(5rem);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(120%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scaleX(0);
+      }
+
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0) translateX(-50%);
+      }
+
+      40% {
+        transform: translateY(-30px) translateX(-50%);
+      }
+
+      60% {
+        transform: translateY(-15px) translateX(-50%);
+      }
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 4rem 0;
+      transition: all 0.8s var(--ease-out);
+      background-color: rgba(249, 245, 240, 0);
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      transform: translateY(-100%);
+      animation: slideDown 1.2s var(--ease-out) 0.4s forwards;
+    }
+
+    header.scrolled {
+      padding: 2.5rem 0;
+      background-color: rgba(249, 245, 240, 0.98);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.6rem;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: var(--taupe);
+      opacity: 0;
+      animation: fadeIn 1s var(--ease-out) 0.6s forwards;
+      position: relative;
+    }
+
+    .logo:after {
+      content: '';
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--taupe);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .logo:hover:after {
+      transform: scaleX(1);
+    }
+
+    .logo span {
+      font-size: 1.4rem;
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 10px;
+      margin-top: 1rem;
+      font-weight: 300;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 6rem;
+      position: relative;
+      opacity: 0;
+      transform: translateY(1rem);
+      animation: fadeIn 0.8s var(--ease-out) forwards;
+    }
+
+    nav ul li:nth-child(1) {
+      animation-delay: 0.8s;
+    }
+
+    nav ul li:nth-child(2) {
+      animation-delay: 0.9s;
+    }
+
+    nav ul li:nth-child(3) {
+      animation-delay: 1.0s;
+    }
+
+    nav ul li:nth-child(4) {
+      animation-delay: 1.1s;
+    }
+
+    nav ul li:nth-child(5) {
+      animation-delay: 1.2s;
+    }
+
+    nav ul li a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      font-weight: 400;
+      position: relative;
+      padding: 1rem 0;
+      display: block;
+    }
+
+    nav ul li a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--taupe);
+      transition: var(--transition);
+    }
+
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      cursor: pointer;
+      font-size: 3.2rem;
+      z-index: 1001;
+      color: var(--taupe);
+      transition: var(--transition);
+    }
+
+    .mobile-menu-btn:hover {
+      transform: rotate(90deg);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      height: 100vh;
+      min-height: 800px;
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1595341595379-cf1cd0fb7fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: var(--text-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(15deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+      z-index: 1;
+    }
+
+    .hero-content {
+      width: 100%;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero h1 {
+      font-size: 10rem;
+      margin-bottom: 4rem;
+      letter-spacing: 5px;
+      font-weight: 400;
+      text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(5rem);
+      animation: fadeInUp 1.6s var(--ease-out) 0.6s forwards;
+    }
+
+    .hero p {
+      font-size: 2.8rem;
+      max-width: 90rem;
+      margin: 0 auto 6rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      opacity: 0;
+      transform: translateY(5rem);
+      animation: fadeInUp 1.6s var(--ease-out) 0.8s forwards;
+    }
+
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      opacity: 0;
+      transform: translateY(5rem);
+      animation: fadeInUp 1.6s var(--ease-out) 1.0s forwards;
+    }
+
+    .hero-btns .btn {
+      border-color: var(--text-light);
+      color: var(--text-light);
+    }
+
+    .hero-btns .btn:before {
+      background-color: var(--text-light);
+    }
+
+    .hero-btns .btn:hover {
+      color: var(--text-dark);
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2.5s infinite 2.0s, fadeIn 1.2s var(--ease-out) 2.0s forwards;
+      color: var(--text-light);
+      font-size: 2.8rem;
+      opacity: 0;
+    }
+
+    .hero-decoration {
+      position: absolute;
+      width: 50rem;
+      height: 50rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      background-color: var(--light-taupe);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 12rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-img {
+      flex: 1;
+      min-height: 80rem;
+      background: url('as-pic5.webp') center/cover;
+      box-shadow: 4rem 4rem 0 var(--taupe);
+      transform: translateX(-10rem);
+      opacity: 0;
+      animation: fadeInRight 1.8s var(--ease-out) 0.8s forwards;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(-10rem);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(10rem);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .about-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(232, 217, 197, 0.2), rgba(232, 217, 197, 0));
+      z-index: 1;
+    }
+
+    .about-content {
+      flex: 1;
+      opacity: 0;
+      transform: translateX(10rem);
+      animation: fadeInLeft 1.8s var(--ease-out) 0.8s forwards;
+    }
+
+    .about-content h2 {
+      margin-bottom: 5rem;
+    }
+
+    .about-content p {
+      margin-bottom: 4rem;
+      font-size: 2.4rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .signature {
+      margin-top: 5rem;
+      font-family: 'Dancing Script', cursive;
+      font-size: 5rem;
+      color: var(--dark-brown);
+      display: inline-block;
+      transform: rotate(-5deg);
+      position: relative;
+    }
+
+    .signature:after {
+      content: '';
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--dark-brown);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .signature:hover:after {
+      transform: scaleX(1);
+    }
+
+    /* ===== COLLECTIONS SECTION ===== */
+    .collections {
+      background-color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .collections-header {
+      text-align: center;
+      margin-bottom: 10rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+      gap: 5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .collection-card {
+      position: relative;
+      height: 65rem;
+      overflow: hidden;
+      perspective: 2000px;
+    }
+
+    .collection-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.5s var(--ease-out), filter 1.5s var(--ease-out);
+      transform-style: preserve-3d;
+      filter: brightness(0.9);
+    }
+
+    .collection-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 5rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+      color: var(--text-light);
+      transform: translateY(100%);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .collection-card:hover .collection-overlay {
+      transform: translateY(0);
+    }
+
+    .collection-card:hover .collection-img {
+      transform: scale(1.1) rotateX(8deg);
+      filter: brightness(0.7);
+    }
+
+    .collection-overlay h3 {
+      margin-bottom: 3rem;
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+
+    .collection-overlay p {
+      margin-bottom: 4rem;
+      font-weight: 300;
+      font-size: 2rem;
+      max-width: 80%;
+    }
+
+    .collection-overlay .btn {
+      align-self: flex-end;
+      margin-top: auto;
+    }
+
+    /* ===== SERVICES SECTION ===== */
+    .services {
+      background-color: var(--light-taupe);
+      position: relative;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+      gap: 6rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card {
+      text-align: center;
+      padding: 8rem 5rem;
+      background-color: var(--cream);
+      transition: var(--transition);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: var(--taupe);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-2rem);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card:hover:before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      font-size: 6.5rem;
+      color: var(--taupe);
+      margin-bottom: 5rem;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1) translateY(-1.5rem);
+      color: var(--dark-brown);
+    }
+
+    .service-card h3 {
+      margin-bottom: 4rem;
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+
+    .service-card p {
+      font-size: 2.2rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* ===== TESTIMONIALS SECTION ===== */
+    .testimonials {
+      background: url('https://images.unsplash.com/photo-1521747116042-5a810fda9664?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover fixed;
+      color: var(--text-light);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonials:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.88);
+      z-index: 0;
+    }
+
+    .testimonials .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .testimonial-slider {
+      max-width: 100rem;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .testimonial {
+      padding: 0 5rem;
+    }
+
+    .testimonial-text {
+      font-size: 3.2rem;
+      font-style: italic;
+      margin-bottom: 6rem;
+      line-height: 1.8;
+      position: relative;
+      font-weight: 300;
+    }
+
+    .testimonial-text:before,
+    .testimonial-text:after {
+      content: '"';
+      font-size: 8rem;
+      color: var(--taupe);
+      opacity: 0.5;
+      position: absolute;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .testimonial-text:before {
+      top: -5rem;
+      left: -4rem;
+    }
+
+    .testimonial-text:after {
+      bottom: -8rem;
+      right: -4rem;
+    }
+
+    .testimonial-author {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-role {
+      font-size: 1.8rem;
+      opacity: 0.8;
+      font-weight: 300;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      background-color: var(--cream);
+      position: relative;
+    }
+
+    .contact-container {
+      display: flex;
+      gap: 12rem;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 5rem;
+      font-size: 3.6rem;
+      font-weight: 400;
+    }
+
+    .contact-details {
+      margin-bottom: 8rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 4rem;
+    }
+
+    .contact-icon {
+      margin-right: 3rem;
+      color: var(--taupe);
+      font-size: 2.4rem;
+      min-width: 4rem;
+      text-align: center;
+      padding-top: 0.5rem;
+    }
+
+    .contact-text h4 {
+      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+
+    .contact-text p,
+    .contact-text a {
+      font-weight: 300;
+      font-size: 2rem;
+    }
+
+    .contact-text a:hover {
+      color: var(--taupe);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 3rem;
+    }
+
+    .social-link {
+      width: 7rem;
+      height: 7rem;
+      border: 1px solid var(--taupe);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      font-size: 2.4rem;
+    }
+
+    .social-link:hover {
+      background-color: var(--taupe);
+      color: var(--text-light);
+      transform: translateY(-1rem) rotate(5deg);
+    }
+
+    .contact-form {
+      flex: 1;
+      background-color: var(--light-taupe);
+      padding: 8rem;
+      box-shadow: 4rem 4rem 0 var(--taupe);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-group {
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 2.2rem;
+      border: 1px solid #ddd;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      transition: var(--transition);
+      background-color: var(--cream);
+      color: var(--text-dark);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--taupe);
+      box-shadow: 0 15px 30px rgba(166, 138, 100, 0.2);
+    }
+
+    textarea.form-control {
+      min-height: 25rem;
+      resize: vertical;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: var(--dark-brown);
+      color: var(--text-light);
+      padding: 12rem 0 6rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.2rem;
+      margin-bottom: 6rem;
+      display: inline-block;
+      color: var(--light-taupe);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5rem;
+      margin-bottom: 8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      position: relative;
+      padding: 1rem 0;
+    }
+
+    .footer-links a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--light-taupe);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover:after {
+      width: 100%;
+    }
+
+    .copyright {
+      font-size: 1.8rem;
+      opacity: 0.7;
+      margin-top: 6rem;
+      position: relative;
+      z-index: 1;
+      font-weight: 300;
+    }
+
+    /* ===== LOADING ANIMATION ===== */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 1s ease-out;
+    }
+
+    .loading-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.8rem;
+      color: var(--taupe);
+      margin-bottom: 4rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out 0.3s forwards;
+    }
+
+    .loading-spinner {
+      width: 5rem;
+      height: 5rem;
+      border: 3px solid rgba(166, 138, 100, 0.2);
+      border-radius: 50%;
+      border-top-color: var(--taupe);
+      animation: spin 1s linear infinite;
+      opacity: 0;
+      animation: spin 1s linear infinite, fadeIn 0.5s ease-out 0.5s forwards;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ===== RESPONSIVE STYLES ===== */
+    @media (max-width: 1800px) {
+      html {
+        font-size: 58%;
+      }
+    }
+
+    @media (max-width: 1440px) {
+      html {
+        font-size: 55%;
+      }
+
+      .hero h1 {
+        font-size: 8rem;
+      }
+
+      .about-container,
+      .contact-container {
+        gap: 8rem;
+      }
+
+      .section-padding {
+        padding: 12rem 0;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      html {
+        font-size: 52%;
+      }
+
+      :root {
+        --section-padding: 10rem 0;
+      }
+
+      .about-container,
+      .contact-container {
+        flex-direction: column;
+      }
+
+      .about-img {
+        min-height: 70rem;
+        width: 100%;
+        margin-bottom: 8rem;
+      }
+
+      .contact-form {
+        margin-top: 8rem;
+      }
+
+      .collections-grid {
+        grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+      }
+    }
+
+    @media (max-width: 992px) {
+      html {
+        font-size: 50%;
+      }
+
+      .header-container {
+        padding: 0 4rem;
+      }
+
+      nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 40rem;
+        height: 100vh;
+        background-color: var(--cream);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        z-index: 999;
+        box-shadow: -20px 0 50px rgba(0, 0, 0, 0.15);
+      }
+
+      nav ul.active {
+        right: 0;
+      }
+
+      nav ul li {
+        margin: 3rem 0;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 6rem;
+      }
+
+      .hero p {
+        font-size: 2.2rem;
+        padding: 0 4rem;
+      }
+
+      .section-title {
+        font-size: 5.5rem;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 35rem;
+        margin: 0 auto;
+      }
+
+      .collections-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-container {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-text {
+        font-size: 2.6rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 5rem;
+      }
+
+      .section-title {
+        font-size: 4.5rem;
+      }
+
+      .contact-form {
+        padding: 6rem;
+      }
+
+      .footer-links {
+        gap: 3rem;
+      }
+
+      .about-content p,
+      .service-card p {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        min-height: 700px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .hero p {
+        font-size: 1.8rem;
+      }
+
+      .section-title {
+        font-size: 3.8rem;
+      }
+
+      .contact-form {
+        padding: 4rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .testimonial-text {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loading Animation -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="loading-logo">EIRA ATELIER</div>
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="header-container">
+      <a href="#" class="logo">EIRA ATELIER<span>TIMELESS ELEGANCE</span></a>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-btn" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-decoration"></div>
+    <div class="hero-content">
+      <div class="container">
+        <h1>EIRA ATELIER</h1>
+        <p>Where heritage craftsmanship meets contemporary luxury in every meticulously crafted piece</p>
+        <div class="hero-btns">
+          <a href="#collections" class="btn">Discover Collections <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-filled">Custom Clothing <i class="fas fa-calendar"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section-padding" id="about">
+    <div class="container about-container">
+      <div class="about-img"></div>
+      <div class="about-content">
+        <h2 class="section-title"><span class="title-text">Our Legacy</span></h2>
+        <p>Established in 2010 by visionary designer Eira Lund, our atelier was born from a desire to create garments
+          that transcend fleeting trends. Each piece is conceived as a future heirloom, crafted to be cherished across
+          generations while maintaining its timeless appeal.</p>
+        <p>Today, our collective of master artisans upholds this philosophy through meticulous attention to detail and
+          an uncompromising commitment to quality. We work exclusively with the world's finest natural materials,
+          ethically sourced and transformed through techniques perfected over decades.</p>
+        <p>An Eira Atelier creation is more than clothing—it's a narrative woven from exceptional craftsmanship,
+          sustainable luxury, and the quiet confidence of enduring style.</p>
+        <div class="signature">Eira Lund</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections Section -->
+  <section class="collections section-padding" id="collections">
+    <div class="container">
+      <div class="collections-header">
+        <h2 class="section-title"><span class="title-text">The Collections</span></h2>
+        <p>Each collection represents a chapter in our ongoing pursuit of sartorial excellence</p>
+      </div>
+      <div class="collections-grid">
+        <div class="collection-card">
+          <img src="as-pic.jpg" alt="Signature Collection" class="collection-img" loading="lazy">
+          <div class="collection-overlay">
+            <h3>Signature Collection</h3>
+            <p>The cornerstone of Eira Atelier - timeless silhouettes that form the foundation of an intentionally
+              curated
+              wardrobe</p>
+            <a href="#" class="btn btn-filled">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+        <div class="collection-card">
+          <img src="as-pic2.webp" alt="Seasonal Editions" class="collection-img" loading="lazy">
+          <div class="collection-overlay">
+            <h3>Seasonal Editions</h3>
+            <p>Limited pieces that capture the ephemeral beauty of each season while maintaining enduring sophistication
+            </p>
+            <a href="#" class="btn btn-filled">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+        <div class="collection-card">
+          <img src="as-[ic3.webp" alt="Bespoke Creations" class="collection-img" loading="lazy">
+          <div class="collection-overlay">
+            <h3>Bespoke Creations</h3>
+            <p>Garments conceived exclusively for you, from initial sketch to final fitting in our Lahore atelier</p>
+            <a href="#" class="btn btn-filled">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+        <div class="collection-card">
+          <img src="as-pic4.webp" alt="Pakistani Dresses" class="collection-img" loading="lazy">
+          <div class="collection-overlay">
+            <h3>Pakistani Dresses</h3>
+            <p>Exquisite traditional Pakistani dresses with contemporary elegance, crafted with premium fabrics and
+              intricate embroidery</p>
+            <a href="#" class="btn btn-filled">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <h2 class="section-title"><span class="title-text">Our Craft</span></h2>
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-cut"></i>
+          </div>
+          <h3>Bespoke Tailoring</h3>
+          <p>Experience the art of custom clothing with our master tailors. From initial consultation to final fitting,
+            we create garments that fit not just your body, but your lifestyle and personality, using techniques
+            perfected over generations.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tshirt"></i>
+          </div>
+          <h3>Wardrobe Architecture</h3>
+          <p>Our style experts will help you build a cohesive wardrobe of timeless pieces that work together seamlessly,
+            eliminating the stress of getting dressed while ensuring you always look your most refined self.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3>Heritage Restoration</h3>
+          <p>Preserve your cherished garments with our expert care. From simple adjustments to complete restorations, we
+            treat each piece with the reverence it deserves, extending its lifespan through meticulous craftsmanship.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <h2 class="section-title"><span class="title-text">Patron Stories</span></h2>
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <p class="testimonial-text">My Eira Atelier coat has been with me through five winters, countless trips, and
+            innumerable compliments. It's not just clothing—it's armor that makes me feel my most confident self while
+            standing the test of time.</p>
+          <div class="testimonial-author">Sarah Kensington</div>
+          <div class="testimonial-role">Patron Since 2015</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section-padding" id="contact">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <h3>Visit Our Atelier</h3>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Location</h4>
+              <p>24 Heritage Lane<br>Lahore, Pakistan</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p>+92 326 9479929</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <a href="mailto:eiraatelierofficial@gmail.com">eiraatelierofficial@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Hours</h4>
+              <p>Tuesday - Saturday: 10am - 6pm<br>Private appointments outside these hours available upon request</p>
+            </div>
+          </div>
+        </div>
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/eira_atelier?igsh=MXR3emplZ3FpajV1bQ%3D%3D&utm_source=qr"
+            class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1AjZerUpUw/?mibextid=wwXIfr" class="social-link" target="_blank"><i
+              class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Begin Your Journey</h3>
+        <form id="consultation-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" class="form-control" placeholder="Phone Number">
+          </div>
+          <div class="form-group">
+            <select class="form-control" required>
+              <option value="" disabled selected>Service of Interest</option>
+              <option>Bespoke Tailoring Consultation</option>
+              <option>Wardrobe Architecture Session</option>
+              <option>Heritage Restoration Inquiry</option>
+              <option>Private Collection Viewing</option>
+              <option>Other Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Tell us about your sartorial aspirations..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-filled">Request Private Appointment <i
+              class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="#" class="footer-logo">EIRA ATELIER</a>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">Our Legacy</a>
+        <a href="#collections">Collections</a>
+        <a href="#services">Our Craft</a>
+        <a href="#contact">Concierge</a>
+        <a href="#">Journal</a>
+        <a href="#">Sustainability</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+      <p class="copyright">© 2023 EIRA ATELIER. All rights reserved. Crafted with intention in Lahore.</p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- GSAP for advanced animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+  <!-- Main JavaScript -->
+  <script>
+    // Loading animation
+    window.addEventListener('load', function () {
+      const loadingOverlay = document.getElementById('loading-overlay');
+      gsap.to(loadingOverlay, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        onComplete: function () {
+          loadingOverlay.style.display = 'none';
+        }
+      });
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ?
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 120,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Testimonial slider
+    const testimonials = [
+      {
+        text: "The craftsmanship of my Eira Atelier coat is unparalleled. It's been three winters, and it still looks brand new while being the most comfortable piece I own.",
+        author: "Michael Chen",
+        role: "Patron Since 2018"
+      },
+      {
+        text: "Working with Eira's team on my wedding dress was a dream. They understood my vision perfectly and created something more beautiful than I could have imagined.",
+        author: "Eleanor Davies",
+        role: "Bride, 2022"
+      },
+      {
+        text: "As someone who values sustainability, I appreciate that Eira Atelier creates pieces meant to last. Their timeless designs mean I wear them year after year.",
+        author: "James Wilson",
+        role: "Patron Since 2017"
+      }
+    ];
+
+    let currentTestimonial = 0;
+    const testimonialElement = document.querySelector('.testimonial');
+
+    function changeTestimonial() {
+      gsap.to(testimonialElement, {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        ease: "power2.out",
+        onComplete: function () {
+          testimonialElement.innerHTML = `
+                        <p class="testimonial-text">${testimonials[currentTestimonial].text}</p>
+                        <div class="testimonial-author">${testimonials[currentTestimonial].author}</div>
+                        <div class="testimonial-role">${testimonials[currentTestimonial].role}</div>
+                    `;
+
+          gsap.fromTo(testimonialElement,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1.5,
+              ease: "power3.out",
+              onComplete: function () {
+                // Animate in the quotation marks
+                gsap.fromTo(".testimonial-text:before, .testimonial-text:after",
+                  { opacity: 0, scale: 0.8 },
+                  { opacity: 0.5, scale: 1, duration: 1, ease: "back.out" }
+                );
+              }
+            }
+          );
+
+          currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        }
+      });
+    }
+
+    // Initialize first testimonial
+    changeTestimonial();
+
+    // Change testimonial every 8 seconds
+    setInterval(changeTestimonial, 8000);
+
+    // Form submission
+    const contactForm = document.getElementById('consultation-form');
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending';
+      submitBtn.disabled = true;
+
+      // Simulate form submission
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent';
+        submitBtn.style.backgroundColor = '#5cb85c';
+        submitBtn.style.borderColor = '#5cb85c';
+
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.style.backgroundColor = '';
+          submitBtn.style.borderColor = '';
+          submitBtn.disabled = false;
+          this.reset();
+        }, 2000);
+      }, 2000);
+    });
+
+    // GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate sections on scroll
+    gsap.utils.toArray('.section-title, .about-img, .about-content, .collection-card, .service-card').forEach(element => {
+      gsap.from(element, {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          markers: false
+        },
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        ease: "power3.out"
+      });
+    });
+
+    // Parallax effect for hero image
+    gsap.to(".hero", {
+      scrollTrigger: {
+        scrub: 0.5,
+        start: "top bottom",
+        end: "bottom top"
+      },
+      backgroundPosition: "50% 50%",
+      ease: "none"
+    });
+
+    // Floating animation for service icons
+    gsap.to(".service-icon", {
+      y: -20,
+      duration: 4,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+
+    // Collection card hover effects
+    document.querySelectorAll('.collection-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+        gsap.to(card.querySelector('.collection-img'), {
+          duration: 1,
+          x: xAxis,
+          y: yAxis,
+          ease: "power1.out"
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card.querySelector('.collection-img'), {
+          duration: 1.2,
+          x: 0,
+          y: 0,
+          ease: "elastic.out(1, 0.5)"
+        });
+      });
+    });
+
+    // Logo hover animation
+    const logo = document.querySelector('.logo');
+    logo.addEventListener('mouseenter', () => {
+      gsap.to(logo, {
+        duration: 0.8,
+        letterSpacing: '6px',
+        ease: "power2.out"
+      });
+    });
+
+    logo.addEventListener('mouseleave', () => {
+      gsap.to(logo, {
+        duration: 0.8,
+        letterSpacing: '4px',
+        ease: "power2.out"
+      });
+    });
+  </script>
+</body>
+
+</html>
