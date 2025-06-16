@@ -507,7 +507,7 @@
     .about-img {
       flex: 1;
       min-height: 80rem;
-      background: url('as-pic5.webp') center/cover;
+      background: url('main.jpg') center/cover;
       box-shadow: 4rem 4rem 0 var(--taupe);
       transform: translateX(-10rem);
       opacity: 0;
@@ -1300,7 +1300,7 @@
       </div>
       <div class="collections-grid">
         <div class="collection-card">
-          <img src="as-pic.jpg" alt="Signature Collection" class="collection-img" loading="lazy">
+          <img src="img1.jpg" alt="Signature Collection" class="collection-img" loading="lazy">
           <div class="collection-overlay">
             <h3>Signature Collection</h3>
             <p>The cornerstone of Eira Atelier - timeless silhouettes that form the foundation of an intentionally
@@ -1310,7 +1310,7 @@
           </div>
         </div>
         <div class="collection-card">
-          <img src="as-pic2.webp" alt="Seasonal Editions" class="collection-img" loading="lazy">
+          <img src="img2.jpg" alt="Seasonal Editions" class="collection-img" loading="lazy">
           <div class="collection-overlay">
             <h3>Seasonal Editions</h3>
             <p>Limited pieces that capture the ephemeral beauty of each season while maintaining enduring sophistication
@@ -1319,7 +1319,7 @@
           </div>
         </div>
         <div class="collection-card">
-          <img src="as-[ic3.webp" alt="Bespoke Creations" class="collection-img" loading="lazy">
+          <img src="img3.jpg" alt="Bespoke Creations" class="collection-img" loading="lazy">
           <div class="collection-overlay">
             <h3>Bespoke Creations</h3>
             <p>Garments conceived exclusively for you, from initial sketch to final fitting in our Lahore atelier</p>
@@ -1327,7 +1327,7 @@
           </div>
         </div>
         <div class="collection-card">
-          <img src="as-pic4.webp" alt="Pakistani Dresses" class="collection-img" loading="lazy">
+          <img src="img4.jpg" alt="Pakistani Dresses" class="collection-img" loading="lazy">
           <div class="collection-overlay">
             <h3>Pakistani Dresses</h3>
             <p>Exquisite traditional Pakistani dresses with contemporary elegance, crafted with premium fabrics and
@@ -1607,20 +1607,20 @@
               ease: "power3.out",
               onComplete: function () {
                 // Animate in the quotation marks
-                gsap.fromTo(".testimonial-text:before, .testimonial-text:after",
+                gsap.fromTo(".testimonial-text:before, .testimonial -text:after",
                   { opacity: 0, scale: 0.8 },
                   { opacity: 0.5, scale: 1, duration: 1, ease: "back.out" }
                 );
               }
             }
           );
-
+                
           currentTestimonial = (currentTestimonial + 1) % testimonials.length;
         }
       });
     }
 
-    // Initialize first testimonial
+    // Initialize first testimonial                
     changeTestimonial();
 
     // Change testimonial every 8 seconds
